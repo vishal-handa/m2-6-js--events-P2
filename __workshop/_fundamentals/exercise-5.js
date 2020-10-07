@@ -87,6 +87,15 @@ const staffMembers = [
 
 const getData = (arr, key, val) => {
   // return something
+  let newarr=[];
+  let temp=key;
+  arr.forEach(element => {
+    const {skillLevels}=element;
+    if(skillLevels.key>val){
+      return newarr.push(element);       
+    }
+  });
+  return newarr;
 };
 
 // 2. Do a console.log to verify your function.
@@ -94,3 +103,26 @@ const getData = (arr, key, val) => {
 // 3. Run the test to validate: yarn test exercise-5
 
 module.exports = { getData, staffMembers };
+
+// function getData(arr, key, val){
+//   // return something
+//   let newarr=[];
+//   let temp=key;
+//   arr.forEach(element => {
+//     const {skillLevels}=element;
+//     if(skillLevels.key>val){
+//       console.log(element);       
+//     }
+//   });
+// }
+// console.log(getData([
+//   {
+//     name: "Jane Smith",
+//     title: "Web Developer II",
+//     skillLevels: {
+//       javascript: 7,
+//       python: 4,
+//       sql: 6,
+//     },
+//   }
+// ],'sql',5));
