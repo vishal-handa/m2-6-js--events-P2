@@ -19,6 +19,17 @@ const people = [
 
 function fullName(peopleArr) {
   // return something
+  let people=peopleArr;
+  return people.map(element => {
+    let {name:{first, middle, last}, age}=element;
+    if(!middle){
+      return first+" "+last;
+    }
+    else{
+      return first+" "+middle+" "+last;
+    }
+  });
+
 }
 
 // 2. Do a console.log to verify your function.

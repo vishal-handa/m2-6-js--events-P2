@@ -19,6 +19,19 @@ const people = [
 
 function olderPeople(peopleArr, age) {
   // return something
+  let kay=age;
+  let newarr=[];
+  peopleArr.map(element =>{
+    let {age}=element;
+
+    if(age>kay){
+      return newarr.push(element);
+    }
+    else{
+      return [];
+    }
+  });
+return newarr;
 }
 
 // 2. Do a console.log to verify your function.
