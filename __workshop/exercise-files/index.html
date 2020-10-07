@@ -5,10 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="style.css" rel="stylesheet" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Jost:400,700&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Signup Form</title>
   </head>
   <body>
+    <!-- main div -->
+    <div class="wrapper">
+      
+      <!-- 1 -->
+      <form>
+        <p>Signup Form</p>
+        <div class="fields">
+          <label for="fname">Full name:</label>
+          <input id="fname" class="ipfield" type="text" required>
+        </div>
+
+        <!-- 2 -->
+        <div class="fields">
+          <label for="address">Street address:</label>
+          <input type="text" class="ipfield" id="address" required>
+        </div>
+
+        <!-- 3 -->
+        <div class="fields">
+          <label for="emailadd">Email address:</label>
+          <input type="email" class="ipfield" id="emailadd" required>
+        </div>
+
+        <!-- 4 -->
+        <div class="fields">
+          <label for="phone">Phone number:</label>
+          <input id="phone" class="ipfield" type="text" required>
+        </div>
+
+        <!-- 5 -->
+        <div class="fields">
+          <label for="pword">Password:</label>
+          <input id="pword" class="ipfield" type="password" required>
+        </div>
+
+        <!-- 6 -->
+        <div class="fields">
+          <label for="confirm">Confirm Password:</label>
+          <input id="confirm" class="ipfield" type="password" required>
+        </div>
+
+        <!-- 7 -->
+        <div id="check">
+            <input  type="checkbox">
+            <label> I agree to the <a href="#">terms of service</a>.</label>
+        </div>
+        <div></div>
+        <!-- 8 -->
+        <div id="buttons">
+          <button id="clear">Clear</button>
+          <button id="submitForm" value="Submit">Submit</button>
+        </div>
+
+      </form>
+      
+    </div>
     <script src="script.js"></script>
   </body>
 </html>

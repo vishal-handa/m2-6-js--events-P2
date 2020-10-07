@@ -1,1 +1,77 @@
 /* add css here */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 3;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    font-family: "Jost";
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    margin-top: 32px;
+    max-width: 475px;
+    padding:24px;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.02), 0 6.7px 5.3px rgba(0, 0, 0, 0.028),
+    0 12.5px 10px rgba(0, 0, 0, 0.035), 0 22.3px 17.9px rgba(0, 0, 0, 0.042),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.05), 0 100px 80px rgba(0, 0, 0, 0.07);
+}
+
+form>p{
+    text-align-last: center; 
+    font-size: 3em;
+    font-weight: 900;
+    padding:20px;
+}
+
+form>div{
+    margin-bottom: 15px;
+} 
+#check{
+    position: relative;
+    align-content: left;
+    background-color: rgb(209, 209, 209);
+    padding: 8px 20px 8px 20px;
+    border-radius: 5px;
+    text-align-last: center; 
+}
+
+#buttons{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0;
+}
+
+#clear{
+    padding:5px 20px 5px 20px;
+    color:white;
+    background-color: hsl(333deg, 100%, 44%);
+    border-radius: 5px;
+    border:none
+}
+
+#submitForm{
+    padding:5px 20px 5px 20px;
+    color:white;
+    background-color: hsl(256deg, 100%, 44%);
+    border-radius: 5px;
+    border:none
+}
+
+.ipfield{
+    width:200px;
+    border-radius: 5px;
+    border: 1px solid rgb(129, 215, 255);
+}
