@@ -17,11 +17,11 @@
     <div class="wrapper">
       
       <!-- 1 -->
-      <form>
+      <form id="form">
         <p>Signup Form</p>
         <div class="fields">
-          <label for="fname">Full name:</label>
-          <input id="fname" class="ipfield" type="text" required>
+          <label for="name">Full name:</label>
+          <input id="name" class="ipfield" type="text" required>
         </div>
 
         <!-- 2 -->
@@ -32,8 +32,8 @@
 
         <!-- 3 -->
         <div class="fields">
-          <label for="emailadd">Email address:</label>
-          <input type="email" class="ipfield" id="emailadd" required>
+          <label for="email">Email address:</label>
+          <input type="email" class="ipfield" id="email" required>
         </div>
 
         <!-- 4 -->
@@ -44,22 +44,22 @@
 
         <!-- 5 -->
         <div class="fields">
-          <label for="pword">Password:</label>
-          <input id="pword" class="ipfield" type="password" required>
+          <label for="password">Password:</label>
+          <input id="password" class="ipfield" type="password" required>
         </div>
 
         <!-- 6 -->
         <div class="fields">
-          <label for="confirm">Confirm Password:</label>
-          <input id="confirm" class="ipfield" type="password" required>
+          <label for="password2">Confirm Password:</label>
+          <input id="password2" class="ipfield" type="password" required>
         </div>
 
         <!-- 7 -->
         <div id="check">
-            <input  type="checkbox">
+            <input id="checkbox" type="checkbox" class="checkit">
             <label> I agree to the <a href="#">terms of service</a>.</label>
         </div>
-        <div></div>
+        <div id="errorbox"><p id="errortext"></p></div>
         <!-- 8 -->
         <div id="buttons">
           <button id="clear">Clear</button>

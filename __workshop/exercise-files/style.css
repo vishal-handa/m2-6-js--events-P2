@@ -75,3 +75,19 @@ form>div{
     border-radius: 5px;
     border: 1px solid rgb(129, 215, 255);
 }
+#errorbox{
+    background-color: pink;
+    text-align:center;
+    border-radius: 5px;
+    padding:10px;
+    display: none;
+}
+
+.errorNotification{
+    width:200px;
+    border-radius: 5px;
+    border:3px solid red;
+}
+.ipfield:focus{
+    outline:none;
+}
