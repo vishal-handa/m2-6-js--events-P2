@@ -93,3 +93,18 @@ form>div{
 .ipfield:focus{
     outline:none;
 }
+
+#suggestion{
+    display:none;
+    padding:10px 30px 10px 30px;
+    border:1px solid rgb(201, 201, 201);
+    background-color: rgb(252, 252, 252);
+    /* box-shadow: 1px 0px 10px -3px rgba(0,0,0,0.75); */
+    font-size: 13px;
+    font-family: inherit;
+    position: absolute;
+    top: 356px;
+    width: 250px;
+    left: 58%;
+    text-align: right;
+}

@@ -1,13 +1,11 @@
 // add js here
 let form=document.getElementById('form');
-let name=document.getElementById('name');
-let address=document.getElementById('address');
-let email=document.getElementById('email');
+
 let password=document.getElementById('password');
 let password2=document.getElementById('password2');
 let clear=document.getElementById('clear');
 let checkbox=document.getElementById('checkbox');
-
+let suggestion=document.getElementById('suggestion');
 let errorbox=document.getElementById('errorbox');
 let errortext=document.getElementById('errortext');
 
@@ -22,9 +20,6 @@ function submitForm(event){
 }
 
 function checkInputs(){
-    // let nameValue=name.value;
-    // let addressValue=address.value;
-    // let emailValue=email.value;
     let passwordValue=password.value;
     let password2Value=password2.value;  
     let checkboxValue=checkbox.checked;
@@ -35,12 +30,15 @@ function checkInputs(){
     } else if(passwordValue.length<10){
         passwordError("The password length must be at least 10 characters.");
         password.classList.add('errorNotification');
+        suggestion.style.display="block";
+        suggestion.innerHTML=`<strong>Use suggested password:</strong> ${passwordGenerator()}`;
         return false;
     } else if(passwordValue!==password2Value){
         passwordError("The passwords do not match.");
         password.classList.add('errorNotification');
         password2.classList.add('errorNotification');
-        return false;
+        suggestion.style.display="block";
+        suggestion.innerHTML=`<strong>Use suggested password:</strong> ${passwordGenerator()}`;
     } else{
         clearErrors();
     }
@@ -58,10 +56,24 @@ function clearErrors () {
     console.log(password,password2);
     password.classList.remove('errorNotification');
     password2.classList.remove('errorNotification');
+    suggestion.style.display="none";
     window.alert("Success!");
-    form.reset();
 }
 
 function resetForm(){
     form.reset();
+}
+
+function passwordGenerator(){
+    let nameList=["crustaceous","moves","advantages","has","over","mississippi","fast","former","faceswap","mixing","liquids","running","downhill","arranging","clown-makeup","popping","buttons","echoing","glass","playing","with","wool"];
+    let pword="";
+    for(let i=1;i<=4;i++){
+        if(i<4){
+            pword+=nameList[Math.floor(Math.random() * nameList.length)]+"-";
+        }
+        else{
+            pword+=nameList[Math.floor(Math.random() * nameList.length)];
+        }
+    }
+    return pword;
 }
