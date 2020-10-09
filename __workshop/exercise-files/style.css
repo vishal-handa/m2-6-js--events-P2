@@ -46,6 +46,7 @@ form>div{
     padding: 8px 20px 8px 20px;
     border-radius: 5px;
     text-align-last: center; 
+    font-size: 13px;
 }
 
 #buttons{
@@ -81,6 +82,7 @@ form>div{
     border-radius: 5px;
     padding:10px;
     display: none;
+    font-size: 13px;
 }
 
 .errorNotification{

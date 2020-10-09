@@ -88,14 +88,13 @@ const staffMembers = [
 const getData = (arr, key, val) => {
   // return something
   let newarr=[];
-  let temp=key;
   arr.forEach(element => {
     const {skillLevels}=element;
-    if(skillLevels.key>val){
-      return newarr.push(element);       
+    if(skillLevels[key]>val || element[key]===val){
+      newarr.push(element);      
     }
   });
-  return newarr;
+return newarr;
 };
 
 // 2. Do a console.log to verify your function.
@@ -110,7 +109,7 @@ module.exports = { getData, staffMembers };
 //   let temp=key;
 //   arr.forEach(element => {
 //     const {skillLevels}=element;
-//     if(skillLevels.key>val){
+//     if(skillLevels[key]>val){
 //       console.log(element);       
 //     }
 //   });
